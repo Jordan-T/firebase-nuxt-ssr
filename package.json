@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-ssr",
+  "version": "1.0.0",
+  "description": "A nuxt ssr firebase project",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "firebase deploy --only hosting,functions",
+    "serve": "firebase serve --only hosting,functions",
+    "build": "npm run build:nuxt && npm run build:firebase",
+    "build:nuxt": "cd src && npm run build && cd ..",
+    "build:firebase": "npm run clean:public && cp -R .\/functions\/nuxt\/dist\/** .\/public",
+    "clean:public": "rm -rf .\/public\/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan-T <jordan.taisne@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "firebase-tools": "^3.17.4"
+  }
+}

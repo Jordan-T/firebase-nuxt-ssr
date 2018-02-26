@@ -1,0 +1,14 @@
+# editor
+.idea
+
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# firebase
+.firebaserc
+
+# public
+public/*
